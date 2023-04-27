@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>lab 11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+  <style>
+    .dropbtn {
+      background-color: red;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: silver;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: black;
+    color: white;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: Darkred;
+    }
+    nav{
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2px;
+    }
+    header{
+    text-align: center;
+    }
+    h1{
+    text-align: center;
+    font-family: 'Tilt Prism', cursive;
+    }
+    </style>
+    </head>
+    
+    <body>
+    <header>Welcome to Cincinnati</header>
+    <nav>
+    <div class="dropdown">
+        <button class="dropbtn">Food</button>
+        <div class="dropdown-content">
+            <a href="http://www.skylinechili.com">Skyline</a>
+            <a href="http://www.goldstarchili.com">GoldStar</a>
+            <a href="http://www.graeters.com">Graeters</a>
+            </div>
+            </div>
+    <div class="dropdown">
+        <button class="dropbtn">Sports</button>
+        <div class="dropdown-content">
+        <a href="http://www.reds.com">Reds</a>
+        <a href="http://www.bengals.com">Bengals</a>
+        </div>
+    </div>
+    </nav>
+    <main>
+    <h1>Cincinnati The Queen City</h1>
+    </main>
+    </body>
+    
+    </html>
