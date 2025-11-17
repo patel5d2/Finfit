@@ -1,0 +1,76 @@
+/*stock*/
+#stock-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  
+  
+}
+
+#stock-section h1, #stock-section h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#stock-section form {
+  margin-bottom: 1rem;
+}
+
+#stock-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#stock-section input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+#stock-section button[type="submit"] {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+#stock-section button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#stock-data {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+}
+
+#stock-chart {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+}
+
+#stock-chart-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

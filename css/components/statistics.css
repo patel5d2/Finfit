@@ -1,0 +1,12 @@
+/*chaet*/
+.chart-container {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+}
+
+.chart {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,51 @@
+/* fund-transfers */
+#fund-transfers {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+#fund-transfers h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+#fund-transfers svg {
+  margin-right: 1rem;
+}
+
+#transfer-funds-form {
+  display: grid;
+  gap: 1rem;
+}
+
+#transfer-funds-form label {
+  font-weight: bold;
+}
+
+#transfer-funds-form input {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+#transfer-funds-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+#transfer-funds-form button:hover {
+  background-color: #0056b3;
+}

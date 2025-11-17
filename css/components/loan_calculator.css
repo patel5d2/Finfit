@@ -1,0 +1,84 @@
+/* lone */
+#loan-details {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+#loan-details h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#loan-details form {
+  margin-bottom: 1rem;
+}
+
+#loan-details label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#loan-details input[type="number"],
+#loan-details select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+#loan-details button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+#loan-details button:hover {
+  background-color: #0056b3;
+}
+
+#loan-results {
+  margin-bottom: 1rem;
+}
+
+.input-tooltip {
+  position: relative;
+}
+
+.input-tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  /* Position the tooltip above the input */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.input-tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#amortization-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

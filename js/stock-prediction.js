@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const stockForm = document.getElementById("stock-form");
     const stockInput = document.getElementById("stock-input");
+    const stockLoading = document.getElementById("stock-loading");
     const stockData = document.getElementById("stock-data");
     const marketIndex = document.getElementById("market-index");
     const latestPrice = document.getElementById("latest-price");
@@ -14,7 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const stockSymbol = stockInput.value.trim().toUpperCase();
   
       if (stockSymbol) {
+        stockLoading.style.display = "block";
+        stockData.style.display = "none";
         const stockQuoteData = await fetchStockData(stockSymbol);
+        stockLoading.style.display = "none";
   
         if (stockQuoteData) {
           updateStockData(stockQuoteData);
@@ -45,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const data = await response.json();
           const quoteData = data["Global Quote"];
   
-          if (!quoteData || !quoteData["01. symbol"]) {
+          if (!quoteData || Object.keys(quoteData).length === 0) {
             throw new Error("Invalid stock symbol");
           }
   
@@ -68,16 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     async function fetchHistoricalData(stockSymbol) {
-      const apiKey = "7YQCRWAATJ49ZQWC";
-      const historicalUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&apikey=${apiKey}`;
-      const historicalResponse = await fetch(historicalUrl);
-  
-      if (historicalResponse.ok) {
-        const historicalData = await historicalResponse.json();
-        const timeSeriesData = historicalData["Time Series (Daily)"];
-        return parseHistoricalData(timeSeriesData);
-      } else {
-        throw new Error("Failed to fetch historical stock data");
+      try {
+        const apiKey = "7YQCRWAATJ49ZQWC";
+        const historicalUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&apikey=${apiKey}`;
+        const historicalResponse = await fetch(historicalUrl);
+    
+        if (historicalResponse.ok) {
+          const historicalData = await historicalResponse.json();
+          const timeSeriesData = historicalData["Time Series (Daily)"];
+          if (!timeSeriesData) {
+            throw new Error("Failed to fetch historical stock data");
+          }
+          return parseHistoricalData(timeSeriesData);
+        } else {
+          throw new Error("Failed to fetch historical stock data");
+        }
+      } catch (error) {
+        console.error(error);
+        return null;
       }
     }
   
@@ -94,6 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     function renderStockChart(historicalData) {
+      if (!historicalData) {
+        return;
+      }
       const stockChartCanvas = document.getElementById("stock-chart-canvas");
       const stockChartContext = stockChartCanvas.getContext("2d");
 

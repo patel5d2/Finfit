@@ -1,0 +1,83 @@
+/* bill-payments */
+#bill-payments {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+#bill-payments h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+#bill-payments svg {
+  margin-right: 1rem;
+}
+
+#schedule-bill-payment-form {
+  display: grid;
+  gap: 1rem;
+}
+
+#schedule-bill-payment-form label {
+  font-weight: bold;
+}
+
+#schedule-bill-payment-form input {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+#schedule-bill-payment-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+#schedule-bill-payment-form button:hover {
+  background-color: #0056b3;
+}
+#bill-payments-list {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+#bill-payments-list h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#bill-payments-list svg {
+  margin-right: 1rem;
+}
+
+#payments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#payments-list li {
+  background-color: #e9ecef;
+  padding: 1rem;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}

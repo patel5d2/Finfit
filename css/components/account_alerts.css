@@ -1,0 +1,9 @@
+/* account-alerts */
+#account-alerts {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}

@@ -1,0 +1,71 @@
+<div id="stock-market-modal" class="modal fade" tabindex="-1" aria-labelledby="stockMarketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="stockMarketModalLabel">Stock Market Lookup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="stock-market-form">
+                    <div class="input-group mb-3">
+                        <input type="text" id="stock-ticker-input" class="form-control" placeholder="Enter ticker symbol (e.g., AAPL)">
+                        <button class="btn btn-primary" type="submit" id="stock-search-btn">Search</button>
+                    </div>
+                </form>
+                <div id="stock-market-loading" style="display: none;">
+                    <p>Loading...</p>
+                </div>
+                <div id="stock-market-data" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 id="stock-company-name"></h3>
+                            <p id="stock-company-description"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Current Price: <span id="stock-current-price"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Price Change: <span id="stock-price-change"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Market Cap: <span id="stock-market-cap"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    P/E Ratio: <span id="stock-pe-ratio"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    52-Week High: <span id="stock-52-week-high"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    52-Week Low: <span id="stock-52-week-low"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Volume: <span id="stock-volume"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <canvas id="stock-price-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <button id="add-to-portfolio-btn" class="btn btn-primary">Add to My Investments</button>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <h4>News</h4>
+                            <ul id="stock-news-list" class="list-group">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

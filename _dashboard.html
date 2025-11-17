@@ -1,0 +1,94 @@
+<div id="dashboard">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">Account Summary</h3>
+                    <button id="link-account-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#link-account-modal">Link Account</button>
+                </div>
+                <div class="card-body">
+                    <ul id="account-summary-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Transactions</h3>
+                    <input type="text" id="transaction-search" class="form-control" placeholder="Search transactions...">
+                </div>
+                <div class="card-body">
+                    <ul id="recent-transactions-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">Budget</h3>
+                    <button id="create-budget-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#budget-modal">Create Budget</button>
+                </div>
+                <div class="card-body">
+                    <ul id="budget-summary-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Savings Goals</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="savings-goals-summary-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">Investments</h3>
+                    <button id="add-investment-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#investments-modal">Add Investment</button>
+                </div>
+                <div class="card-body">
+                    <ul id="investments-summary-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">Credit Score</h3>
+                    <button id="view-credit-score-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#credit-score-modal">View Score</button>
+                </div>
+                <div class="card-body text-center">
+                    <h1 id="credit-score-summary" class="display-1"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">Stock Market Lookup</h3>
+                    <button id="view-stock-market-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stock-market-modal">Lookup Stock</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="link-account-placeholder"></div>
+<div id="categorize-transaction-placeholder"></div>
+<div id="budget-placeholder"></div>
+<div id="investments-placeholder"></div>
+<div id="credit-score-placeholder"></div>
+<div id="stock-market-placeholder"></div>
